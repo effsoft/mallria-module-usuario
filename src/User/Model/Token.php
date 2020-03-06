@@ -28,7 +28,7 @@ use yii\helpers\Url;
  * @property string $code
  * @property int $type
  * @property string $url
- * @property bool $isExpired
+ * @property bool $isTokenExpired
  * @property int $created_at
  * @property User $user
  */
