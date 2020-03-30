@@ -7,7 +7,7 @@ return [
     'Captcha' => '验证码',
     'No account?' => '还没有账号？',
     'Join us now!' => '现在就注册！',
-    'Didn\'t get registration confirm email?' => '还未收到激活邮件？',
+    "Didn't get registration confirm email?" => '还未收到激活邮件？',
     'I agree processing of my personal data and the use of cookies to facilitate the operation of this site. For more information read our {privacyPolicy}' => '@@@@',
     'privacy policy' => '@@@@',
     '{0, date, MMM dd, YYYY HH:mm}' => '@@@@',
