@@ -12,7 +12,7 @@
 use yii\bootstrap\Alert;
 
 /**
- * @var $module Da\User\Module
+ * @var $module Da\User\UsuarioModule
  */
 ?>
 

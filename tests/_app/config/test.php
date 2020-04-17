@@ -14,7 +14,7 @@ return [
     'bootstrap' => ['Da\User\Bootstrap'],
     'modules' => [
         'user' => [
-            'class' => 'Da\User\Module',
+            'class' => 'Da\User\UsuarioModule',
             'administrators' => ['user'],
         ],
     ],

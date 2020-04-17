@@ -12,7 +12,7 @@
 namespace Da\User\Filter;
 
 use Da\User\Model\User;
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use Yii;
 use yii\base\ActionFilter;
 
@@ -20,7 +20,7 @@ class PasswordAgeEnforceFilter extends ActionFilter
 {
     public function beforeAction($action)
     {
-        /** @var Module $module */
+        /** @var UsuarioModule $module */
         $module = Yii::$app->getModule('user');
         $maxPasswordAge = $module->maxPasswordAge;
         // If feature is not set do nothing (or raise a configuration error?)

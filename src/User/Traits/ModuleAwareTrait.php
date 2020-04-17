@@ -11,16 +11,16 @@
 
 namespace Da\User\Traits;
 
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use Yii;
 
 /**
- * @property-read Module $module
+ * @property-read UsuarioModule $module
  */
 trait ModuleAwareTrait
 {
     /**
-     * @return Module
+     * @return UsuarioModule
      */
     public function getModule()
     {

@@ -3,7 +3,7 @@
 
 use Da\User\Model\Token;
 use Da\User\Model\User;
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use tests\_fixtures\UserFixture;
 use yii\helpers\Html;
 
@@ -19,7 +19,7 @@ class GdprCest
 
     public function _after(FunctionalTester $I)
     {
-        \Yii::$container->set(Module::className(), [
+        \Yii::$container->set(UsuarioModule::className(), [
             'enableEmailConfirmation' => true,
             'generatePasswords' => false,
         ]);
@@ -64,7 +64,7 @@ class GdprCest
 
     public function _prepareModule($emailConfirmation = true, $generatePasswords = false, $enableGdpr = true)
     {
-        /* @var $module Module */
+        /* @var $module UsuarioModule */
         $module = Yii::$app->getModule('user');
         $module->enableEmailConfirmation = $emailConfirmation;
         $module->generatePasswords = $generatePasswords;
@@ -170,7 +170,7 @@ class GdprCest
     public function testForcedConsentRequirement(FunctionalTester $I)
     {
         $this->_prepareModule(false,false);
-        /** @var Module $module */
+        /** @var UsuarioModule $module */
         $module = Yii::$app->getModule('user');
         $module->gdprRequireConsentToAll = true;
         $I->amGoingTo('Try to access a page without giving data processing consent');

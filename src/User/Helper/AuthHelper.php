@@ -12,7 +12,7 @@
 namespace Da\User\Helper;
 
 use Da\User\Model\AbstractAuthItem;
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use Da\User\Traits\AuthManagerAwareTrait;
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -50,7 +50,7 @@ class AuthHelper
      */
     public function isAdmin($username)
     {
-        /** @var Module $module */
+        /** @var UsuarioModule $module */
         $module = Yii::$app->getModule('user');
         $hasAdministratorPermissionName = $this->getAuthManager() && $module->administratorPermissionName
             ? Yii::$app->getUser()->can($module->administratorPermissionName)

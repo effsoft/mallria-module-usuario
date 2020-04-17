@@ -20,7 +20,7 @@ use yii\helpers\Html;
 /**
  * This is the main module class of the yii2-usuario extension.
  */
-class Module extends BaseModule
+class UsuarioModule extends BaseModule
 {
     /**
      * @var bool whether to enable european G.D.P.R. compliance.

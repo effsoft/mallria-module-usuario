@@ -11,7 +11,7 @@
 
 /**
  * @var yii\web\View
- * @var \Da\User\Module $module
+ * @var \Da\User\UsuarioModule $module
  * @var string          $title
  */
 

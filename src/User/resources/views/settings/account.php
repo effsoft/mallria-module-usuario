@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
 $this->title = Yii::t('usuario', 'Account settings');
 $this->params['breadcrumbs'][] = $this->title;
 
-/** @var \Da\User\Module $module */
+/** @var \Da\User\UsuarioModule $module */
 $module = Yii::$app->getModule('user');
 ?>
 <div class="clearfix"></div>

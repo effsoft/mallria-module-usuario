@@ -41,7 +41,7 @@ class Bootstrap implements BootstrapInterface
      */
     public function bootstrap($app)
     {
-        if ($app->hasModule('user') && $app->getModule('user') instanceof Module) {
+        if ($app->hasModule('user') && $app->getModule('user') instanceof UsuarioModule) {
             $map = $this->buildClassMap($app->getModule('user')->classMap);
             $this->initContainer($app, $map);
             $this->initTranslations($app);
@@ -224,7 +224,7 @@ class Bootstrap implements BootstrapInterface
      */
     protected function initUrlRoutes(WebApplication $app)
     {
-        /** @var $module Module */
+        /** @var $module UsuarioModule */
         $module = $app->getModule('user');
         $config = [
             'class' => 'yii\web\GroupUrlRule',
@@ -244,9 +244,9 @@ class Bootstrap implements BootstrapInterface
      * Ensures required mail parameters needed for the mail service.
      *
      * @param Application             $app
-     * @param Module|\yii\base\Module $module
+     * @param UsuarioModule|\yii\base\Module $module
      */
-    protected function initMailServiceConfiguration(Application $app, Module $module)
+    protected function initMailServiceConfiguration(Application $app, UsuarioModule $module)
     {
         $defaults = [
             'fromEmail' => 'no-reply@example.com',

@@ -15,7 +15,7 @@ use Da\User\Contracts\ServiceInterface;
 use Da\User\Controller\AdminController;
 use Da\User\Event\UserEvent;
 use Da\User\Model\User;
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use Da\User\Query\UserQuery;
 use Da\User\Traits\ContainerAwareTrait;
 use Yii;
@@ -33,7 +33,7 @@ class SwitchIdentityService implements ServiceInterface
 
     public function __construct(AdminController $controller, UserQuery $userQuery, $userId = null)
     {
-        /** @var Module $module */
+        /** @var UsuarioModule $module */
         $module = $controller->module;
         $this->controller = $controller;
         $this->switchIdentitySessionKey = $module->switchIdentitySessionKey;

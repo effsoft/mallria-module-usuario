@@ -22,7 +22,7 @@ use Da\User\Helper\SecurityHelper;
 use Da\User\Model\Profile;
 use Da\User\Model\SocialNetworkAccount;
 use Da\User\Model\User;
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use Da\User\Query\ProfileQuery;
 use Da\User\Query\SocialNetworkAccountQuery;
 use Da\User\Query\UserQuery;
@@ -60,7 +60,7 @@ class SettingsController extends Controller
      * SettingsController constructor.
      *
      * @param string                    $id
-     * @param Module                    $module
+     * @param UsuarioModule                    $module
      * @param ProfileQuery              $profileQuery
      * @param UserQuery                 $userQuery
      * @param SocialNetworkAccountQuery $socialNetworkAccountQuery
@@ -68,7 +68,7 @@ class SettingsController extends Controller
      */
     public function __construct(
         $id,
-        Module $module,
+        UsuarioModule $module,
         ProfileQuery $profileQuery,
         UserQuery $userQuery,
         SocialNetworkAccountQuery $socialNetworkAccountQuery,

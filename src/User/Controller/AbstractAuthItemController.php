@@ -14,7 +14,7 @@ namespace Da\User\Controller;
 use Da\User\Filter\AccessRuleFilter;
 use Da\User\Helper\AuthHelper;
 use Da\User\Model\AbstractAuthItem;
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use Da\User\Service\AuthItemEditionService;
 use Da\User\Traits\ContainerAwareTrait;
 use Da\User\Validator\AjaxRequestModelValidator;
@@ -34,11 +34,11 @@ abstract class AbstractAuthItemController extends Controller
      * AbstractAuthItemController constructor.
      *
      * @param string     $id
-     * @param Module     $module
+     * @param UsuarioModule     $module
      * @param AuthHelper $authHelper
      * @param array      $config
      */
-    public function __construct($id, Module $module, AuthHelper $authHelper, array $config = [])
+    public function __construct($id, UsuarioModule $module, AuthHelper $authHelper, array $config = [])
     {
         $this->authHelper = $authHelper;
         parent::__construct($id, $module, $config);

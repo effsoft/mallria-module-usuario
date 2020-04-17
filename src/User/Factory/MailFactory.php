@@ -14,7 +14,7 @@ namespace Da\User\Factory;
 use Da\User\Event\MailEvent;
 use Da\User\Model\Token;
 use Da\User\Model\User;
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use Da\User\Service\MailService;
 use Yii;
 use yii\base\InvalidConfigException;
@@ -30,7 +30,7 @@ class MailFactory
      */
     public static function makeWelcomeMailerService(User $user, $showPassword = false)
     {
-        /** @var Module $module */
+        /** @var UsuarioModule $module */
         $module = Yii::$app->getModule('user');
         $to = $user->email;
         $from = $module->mailParams['fromEmail'];
@@ -54,7 +54,7 @@ class MailFactory
      */
     public static function makeRecoveryMailerService($email, Token $token = null)
     {
-        /** @var Module $module */
+        /** @var UsuarioModule $module */
         $module = Yii::$app->getModule('user');
         $to = $email;
         $from = $module->mailParams['fromEmail'];
@@ -76,7 +76,7 @@ class MailFactory
      */
     public static function makeConfirmationMailerService(User $user, Token $token = null)
     {
-        /** @var Module $module */
+        /** @var UsuarioModule $module */
         $module = Yii::$app->getModule('user');
         $to = $user->email;
         $from = $module->mailParams['fromEmail'];
@@ -98,7 +98,7 @@ class MailFactory
      */
     public static function makeReconfirmationMailerService(User $user, Token $token)
     {
-        /** @var Module $module */
+        /** @var UsuarioModule $module */
         $module = Yii::$app->getModule('user');
         $to = $token->type === Token::TYPE_CONFIRM_NEW_EMAIL
             ? $user->unconfirmed_email

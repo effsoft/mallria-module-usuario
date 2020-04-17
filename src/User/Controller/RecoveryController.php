@@ -16,7 +16,7 @@ use Da\User\Event\ResetPasswordEvent;
 use Da\User\Factory\MailFactory;
 use Da\User\Form\RecoveryForm;
 use Da\User\Model\Token;
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use Da\User\Query\TokenQuery;
 use Da\User\Query\UserQuery;
 use Da\User\Service\PasswordRecoveryService;
@@ -43,12 +43,12 @@ class RecoveryController extends Controller
      * RecoveryController constructor.
      *
      * @param string     $id
-     * @param Module     $module
+     * @param UsuarioModule     $module
      * @param UserQuery  $userQuery
      * @param TokenQuery $tokenQuery
      * @param array      $config
      */
-    public function __construct($id, Module $module, UserQuery $userQuery, TokenQuery $tokenQuery, array $config = [])
+    public function __construct($id, UsuarioModule $module, UserQuery $userQuery, TokenQuery $tokenQuery, array $config = [])
     {
         $this->userQuery = $userQuery;
         $this->tokenQuery = $tokenQuery;

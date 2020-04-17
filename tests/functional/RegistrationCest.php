@@ -3,7 +3,7 @@
 
 use Da\User\Model\Token;
 use Da\User\Model\User;
-use Da\User\Module;
+use Da\User\UsuarioModule;
 use tests\_fixtures\UserFixture;
 use yii\helpers\Html;
 
